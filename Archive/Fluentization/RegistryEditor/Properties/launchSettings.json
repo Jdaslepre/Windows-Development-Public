@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "RegistryEditor (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "RegistryEditor (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
