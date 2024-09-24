@@ -1,0 +1,25 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<Ex:WindowEx x:Class="CustomShellTesting.MainWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:CustomShellTesting"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:shell="using:CustomShellTesting.Shell.Taskbar"
+             xmlns:Ex="using:WinUIEx"
+             mc:Ignorable="d">
+
+    <Grid>
+        
+        <Image x:Name="Wallpaper"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Stretch="UniformToFill"
+               Canvas.ZIndex="0" />
+
+        <shell:TaskbarControl VerticalAlignment="Bottom" Canvas.ZIndex="10" />
+
+    </Grid>
+</Ex:WindowEx>

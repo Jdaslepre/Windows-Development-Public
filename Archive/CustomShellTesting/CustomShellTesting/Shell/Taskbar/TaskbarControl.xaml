@@ -1,0 +1,150 @@
+<!-- Copyright (c) Microsoft Corporation and Contributors. -->
+<!-- Licensed under the MIT License. -->
+
+<UserControl x:Class="CustomShellTesting.Shell.Taskbar.TaskbarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:CustomShellTesting.Shell.Taskbar"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Height="40">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Shell/Taskbar/TaskbarResources.xaml" />
+    </UserControl.Resources>
+
+    <Grid>
+
+        <Grid x:Name="TaskbarPanel"
+              VerticalAlignment="Stretch"
+              MaxHeight="72">
+
+            <Grid x:Name="RootGrid"
+                  Background="{ThemeResource TaskbarAcrylicBrush}"
+                  BorderBrush="{ThemeResource ControlStrokeColorDefaultBrush}"
+                  BorderThickness="0,1,0,0">
+
+                <StackPanel Orientation="Horizontal"
+                            Padding="4,0"
+                            Spacing="4">
+
+                    <Button x:Name="StartButton"
+                            Style="{StaticResource TaskbarItem}"
+                            FontFamily="HoloLens MDL2 Assets"
+                            FontSize="16"
+                            Content="&#xE782;" />
+
+                    <AutoSuggestBox FontSize="12"
+                                    VerticalContentAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    PlaceholderText="Type here to search"
+                                    QueryIcon="Find"
+                                    Width="280"
+                                    MinHeight="0" />
+
+                    <Button Style="{StaticResource TaskbarItem}"
+                            FontFamily="Segoe MDL2 Assets"
+                            FontSize="16"
+                            Content="&#xE7C4;" />
+
+                    <ItemsRepeater x:Name="TaskList">
+                        <ItemsRepeater.ItemTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource TaskbarItem}" ToolTipService.ToolTip="{Binding}" ToolTipService.Placement="Top">
+                                    <Image Width="24"
+                                           Height="24"
+                                           HorizontalAlignment="Center"
+                                           VerticalAlignment="Center"
+                                           Source="{Binding Icon}"/>
+                                </Button>
+                            </DataTemplate>
+                        </ItemsRepeater.ItemTemplate>
+                    </ItemsRepeater>
+
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+        <StackPanel x:Name="SystemTrayArea"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Stretch"
+                    Orientation="Horizontal">
+
+
+            <Button Style="{StaticResource TaskbarItem}"
+                    Width="32"
+                    FontSize="16"
+                    FontFamily="Segoe Fluent Icons"
+                    Content="&#xE971;">
+                <Button.Flyout>
+                    <Flyout>
+                        <GridView x:Name="flygrid">
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Style="{StaticResource TaskbarItem}"
+                                            Width="32">
+                                        <Button.ContentTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Image Width="24"
+                                                           Height="24"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </Button.ContentTemplate>
+                                    </Button>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+
+            <Button x:Name="QuickSettingsFlyoutButton"
+                    Style="{StaticResource TaskbarItem}"
+                    Padding="12,0"
+                    Width="Auto">
+
+                <StackPanel Orientation="Horizontal"
+                            Spacing="12">
+
+
+                    <FontIcon x:Name="QSNetworkStatus"
+                              Glyph="&#xE701;"
+                              FontSize="16" />
+
+                    <FontIcon x:Name="QSAudioStatus"
+                              Glyph="&#xE767;"
+                              FontSize="16" />
+
+                    <FontIcon x:Name="QSPowerStatus"
+                              Glyph="&#xEA94;"
+                              FontSize="26"
+                              UseLayoutRounding="True"
+                              x:Load="False" />
+
+                    <FontIcon x:Name="QSNoti"
+                              Glyph="&#xE91C;"
+                              FontSize="16" />
+
+                </StackPanel>
+
+            </Button>
+
+            <Button x:Name="TimeDateFlyoutButton"
+                    Style="{StaticResource TaskbarItem}"
+                    Padding="12,0"
+                    Width="Auto"
+                    Content="{x:Bind viewmodel.TimeManager.Time,Mode=OneWay}"
+                    FontSize="14"
+                    FontWeight="SemiBold" />
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>

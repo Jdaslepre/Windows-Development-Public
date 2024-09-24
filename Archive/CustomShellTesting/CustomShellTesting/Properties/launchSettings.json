@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "CustomShellTesting (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "CustomShellTesting (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

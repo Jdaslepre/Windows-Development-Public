@@ -1,0 +1,1 @@
+D:\Dev\Projects\Git\Windows-Development-Public\Archive\CustomShellTesting\CustomShellTesting\CustomShellTesting.csproj;x64

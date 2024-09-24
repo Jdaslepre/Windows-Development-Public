@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "dgSpecHash": "FwhJK+6sHxAgxyi+oCJOodKZoiuHHZH1AbwE5Whscy2n1D2Cpd96aLwrAaXGMb56wBV2iebKjZ9TUkpnKyko6Q==",
+  "success": true,
+  "projectFilePath": "D:\\Dev\\Projects\\Git\\Windows-Development-Public\\Archive\\CustomShellTesting\\CustomShellTesting\\CustomShellTesting.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jd1ex\\.nuget\\packages\\managedshell\\0.0.200\\managedshell.0.0.200.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "D:\\Dev Tools\\Visual Studio\\Components\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.windowsappsdk\\1.2.230313.1\\microsoft.windowsappsdk.1.2.230313.1.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.data.oledb\\6.0.0\\system.data.oledb.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.diagnostics.performancecounter\\6.0.0\\system.diagnostics.performancecounter.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.serviceprocess.servicecontroller\\6.0.0\\system.serviceprocess.servicecontroller.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\windowsapicodepack-core\\1.1.1\\windowsapicodepack-core.1.1.1.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\windowsapicodepack-shell\\1.1.1\\windowsapicodepack-shell.1.1.1.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\winuiex\\1.8.0\\winuiex.1.8.0.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\6.0.27\\microsoft.netcore.app.runtime.win-x86.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.31\\microsoft.windows.sdk.net.ref.10.0.19041.31.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\6.0.27\\microsoft.aspnetcore.app.runtime.win-x86.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.27\\microsoft.windowsdesktop.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.27\\microsoft.netcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.host.win-arm64\\6.0.27\\microsoft.netcore.app.host.win-arm64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.runtime.win-arm64\\6.0.27\\microsoft.netcore.app.runtime.win-arm64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.27\\microsoft.aspnetcore.app.runtime.win-x64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-arm64\\6.0.27\\microsoft.windowsdesktop.app.runtime.win-arm64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.27\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.27\\microsoft.aspnetcore.app.ref.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.27\\microsoft.netcore.app.host.win-x64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-arm64\\6.0.27\\microsoft.aspnetcore.app.runtime.win-arm64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.27\\microsoft.netcore.app.runtime.win-x64.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\6.0.27\\microsoft.windowsdesktop.app.runtime.win-x86.6.0.27.nupkg.sha512",
+    "C:\\Users\\jd1ex\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\6.0.27\\microsoft.netcore.app.host.win-x86.6.0.27.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WindowsAPICodePack-Core 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows10.0.19041'. This package may not be fully compatible with your project.",
+      "libraryId": "WindowsAPICodePack-Core",
+      "targetGraphs": [
+        "net6.0-windows10.0.19041"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'WindowsAPICodePack-Shell 1.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0-windows10.0.19041'. This package may not be fully compatible with your project.",
+      "libraryId": "WindowsAPICodePack-Shell",
+      "targetGraphs": [
+        "net6.0-windows10.0.19041"
+      ]
+    }
+  ]
+}
