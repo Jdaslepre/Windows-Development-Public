@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="ShellApp.Shell.Tablet.Taskbar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:ShellApp.Shell.Tablet"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+             mc:Ignorable="d"
+             Height="45">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Shell/Taskbar/TaskbarResources.xaml" />
+    </UserControl.Resources>
+
+    <Grid Background="{ThemeResource ShellAcrylicBrush}">
+        <Rectangle Fill="{ThemeResource SurfaceStrokeColorDefaultBrush}"
+                   VerticalAlignment="Top"
+                   Height="1" />
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Stretch">
+
+            <ToggleButton Style="{StaticResource ToggleTaskbarItem}"
+                          Width="50"
+                          x:Name="StartButton"
+                          FontFamily="HoloLens MDL2 Assets"
+                          FontSize="16"
+                          Content="&#xE782;"
+                          ToolTipService.ToolTip="Start">
+            </ToggleButton>
+            <muxc:ItemsRepeater x:Name="TaskList"
+                                ItemsSource="{Binding Pinned.TaskbarItems}">
+                <muxc:ItemsRepeater.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource TaskbarItem}">
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <Grid>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                    </DataTemplate>
+                </muxc:ItemsRepeater.ItemTemplate>
+            </muxc:ItemsRepeater>
+            <ToggleButton Style="{StaticResource ToggleTaskbarItem}"
+                          Width="50"
+                          x:Name="TaskViewButton"
+                          FontFamily="Segoe Fluent Icons"
+                          FontSize="16"
+                          Content="&#xE7C4;"
+                          ToolTipService.ToolTip="Start">
+            </ToggleButton>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

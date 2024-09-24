@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<TargetPlatformVersion>10.0.22000</TargetPlatformVersion>
+	<AssetTargetFallback>uap10.0.22000</AssetTargetFallback>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+    <StartupObject>WPF.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ManagedShell" Version="0.0.200" />
+    <PackageReference Include="Microsoft.Toolkit.Wpf.UI.XamlHost" Version="6.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shell\Shell.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ShellUtilities\" />
+  </ItemGroup>
+
+</Project>

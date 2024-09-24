@@ -1,0 +1,219 @@
+<UserControl x:Class="ShellApp.Shell.Taskbar.TaskbarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:ShellApp.Shell.Taskbar"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+             mc:Ignorable="d"
+             HorizontalAlignment="Stretch"
+             MaxHeight="40">
+
+    <UserControl.Resources>
+        <ResourceDictionary Source="/Shell/Taskbar/TaskbarResources.xaml" />
+    </UserControl.Resources>
+
+    <Grid>
+
+        <Grid x:Name="TaskbarPanel">
+
+            <Grid x:Name="RootGrid">
+
+                <Rectangle Canvas.ZIndex="1"
+                           Fill="{ThemeResource SurfaceStrokeColorDefaultBrush}"
+                           Height="1"
+                           VerticalAlignment="Top" />
+
+                <Rectangle Canvas.ZIndex="0"
+                           Fill="{ThemeResource TaskbarAcrylicBrush}" />
+
+                <StackPanel Orientation="Horizontal">
+
+                    <ToggleButton Style="{StaticResource ToggleTaskbarItem}"
+                                  x:Name="StartButton"
+                                  FontFamily="HoloLens MDL2 Assets"
+                                  FontSize="16"
+                                  Content="&#xE782;"
+                                  ToolTipService.ToolTip="Start"
+                                  RightTapped="ShowTaskbarContextMenu">
+                        <ToggleButton.Resources>
+                            <MenuFlyout x:Name="taskbarflyout">
+                                <MenuFlyoutItem x:Name="TaskManagerMenuItem"
+                                                Text="Task Manager">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xEA3A;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Settings">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xE713;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Search">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xE721;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutItem Text="Run">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xEA3A;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                                <MenuFlyoutSeparator />
+                                <MenuFlyoutSubItem Text="Lumi shell">
+                                    <MenuFlyoutSubItem.Icon>
+                                        <FontIcon Glyph="&#xF6B8;" />
+                                    </MenuFlyoutSubItem.Icon>
+                                    <MenuFlyoutItem Text="Settings">
+                                        <MenuFlyoutItem.Icon>
+                                            <FontIcon Glyph="&#xE713;" />
+                                        </MenuFlyoutItem.Icon>
+                                    </MenuFlyoutItem>
+                                    <MenuFlyoutSeparator />
+                                    <MenuFlyoutItem x:Name="CloseLumi"
+                                                    Text="Close">
+                                        <MenuFlyoutItem.Icon>
+                                            <FontIcon Glyph="&#xEA3A;" />
+                                        </MenuFlyoutItem.Icon>
+                                    </MenuFlyoutItem>
+                                </MenuFlyoutSubItem>
+                                <MenuFlyoutSubItem Text="Shut down or sign out">
+                                    <MenuFlyoutSubItem.Icon>
+                                        <FontIcon Glyph="&#xE7E8;" />
+                                    </MenuFlyoutSubItem.Icon>
+                                </MenuFlyoutSubItem>
+                                <MenuFlyoutItem Text="Desktop">
+                                    <MenuFlyoutItem.Icon>
+                                        <FontIcon Glyph="&#xE7F4;" />
+                                    </MenuFlyoutItem.Icon>
+                                </MenuFlyoutItem>
+                            </MenuFlyout>
+                        </ToggleButton.Resources>
+                    </ToggleButton>
+
+                    <AutoSuggestBox FontSize="12"
+                                    VerticalContentAlignment="Center"
+                                    PlaceholderText="Type here to search"
+                                    QueryIcon="Find"
+                                    Width="280"
+                                    Margin="4,4"
+                                    MinHeight="0"
+                                    Canvas.ZIndex="2" />
+
+                    <ToggleButton Style="{StaticResource ToggleTaskbarItem}"
+                                  FontFamily="Segoe MDL2 Assets"
+                                  FontSize="16"
+                                  Content="&#xE7C4;"
+                                  Click="TaskView_Click" />
+
+                    <muxc:ItemsRepeater x:Name="TaskList" ItemsSource="{Binding Items}">
+                        <muxc:ItemsRepeater.ItemTemplate>
+                            <DataTemplate>
+                                <Button Style="{StaticResource TaskbarItem}">
+                                    <Button.ContentTemplate>
+                                        <DataTemplate>
+                                            <Grid>
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </Button.ContentTemplate>
+                                </Button>
+                            </DataTemplate>
+                        </muxc:ItemsRepeater.ItemTemplate>
+                    </muxc:ItemsRepeater>
+
+                </StackPanel>
+
+
+
+
+
+            </Grid>
+
+        </Grid>
+
+        <StackPanel x:Name="SystemTrayArea"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Stretch"
+                    Orientation="Horizontal">
+
+
+            <Button Style="{StaticResource TaskbarItem}"
+                    Width="34"
+                    FontSize="16"
+                    FontFamily="Segoe Fluent Icons"
+                    Content="&#xE971;">
+                <Button.Flyout>
+                    <Flyout ShouldConstrainToRootBounds="False">
+                        <GridView>
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <Button Style="{StaticResource TaskbarItem}"
+                                            Width="32">
+                                        <Button.ContentTemplate>
+                                            <DataTemplate>
+                                                <Grid>
+                                                    <Image Width="24"
+                                                           Height="24"
+                                                           HorizontalAlignment="Center"
+                                                           VerticalAlignment="Center" />
+                                                </Grid>
+                                            </DataTemplate>
+                                        </Button.ContentTemplate>
+                                    </Button>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
+                    </Flyout>
+                </Button.Flyout>
+            </Button>
+
+            <ToggleButton x:Name="ActionCenterFlyoutButton"
+                          Style="{StaticResource ToggleTaskbarItem}"
+                          Padding="8,0"
+                          Width="Auto">
+
+                <StackPanel Orientation="Horizontal"
+                            Spacing="8">
+
+
+                    <FontIcon x:Name="QSNetworkStatus"
+                              Glyph="&#xE701;"
+                              FontSize="16" />
+
+                    <FontIcon x:Name="QSAudioStatus"
+                              Glyph="&#xE767;"
+                              FontSize="16" />
+
+                    <FontIcon x:Name="QSPowerStatus"
+                              Glyph="&#xEA94;"
+                              FontSize="26"
+                              UseLayoutRounding="True"
+                              x:Load="False" />
+
+                    <FontIcon x:Name="QSNoti"
+                              Glyph="&#xE91C;"
+                              FontSize="16" />
+
+                </StackPanel>
+
+            </ToggleButton>
+
+            <ToggleButton x:Name="TimeDateFlyoutButton"
+                          Style="{StaticResource ToggleTaskbarItem}"
+                          Padding="0"
+                          Width="80"
+                          Content="{Binding TimeManager.Time, Mode=TwoWay}"
+                          FontSize="14"
+                          FontWeight="SemiBold">
+            </ToggleButton>
+
+            <!--
+                    Content="{x:Bind viewmodel.TimeManager.Time,Mode=OneWay}"
+            -->
+
+        </StackPanel>
+
+    </Grid>
+
+</UserControl>
